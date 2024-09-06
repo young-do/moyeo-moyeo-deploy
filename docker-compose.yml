@@ -4,8 +4,10 @@ services:
     build:
       context: ./frontend
       dockerfile: ../Dockerfile.frontend
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf # Nginx 설정 파일
     ports:
-      - "80:8080" # 외부 포트를 80번으로 매핑
+      - "80:80"
     networks:
       - app-network
 
