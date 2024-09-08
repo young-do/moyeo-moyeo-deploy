@@ -21,7 +21,6 @@ services:
       - app-network
 
   db:
-    container_name: mysql-moyeomoyeo
     image: mysql:8.0.31
     ports:
       - "3333:3306"
@@ -35,6 +34,8 @@ services:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./mysql/init:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
 
 networks:
   app-network:
