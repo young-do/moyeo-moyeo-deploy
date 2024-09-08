@@ -1,6 +1,8 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/Nexters/moyeo-moyeo-FE.git
+	branch = main
 [submodule "backend"]
 	path = backend
 	url = https://github.com/Nexters/moyeo-moyeo-BE
+	branch = compose
